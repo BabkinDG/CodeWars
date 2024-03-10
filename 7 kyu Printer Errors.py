@@ -8,4 +8,5 @@ def printer_error(s):
             er += 1
     return f'{er}/{len(s)}'
 
+
 print(printer_error(s))
