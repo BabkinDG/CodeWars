@@ -1,7 +1,7 @@
 numbers = "8 3 -5 42 -1 0 0 -9 4 7 4 -4"  # return "42 -9"
 
 def high_and_low(numbers):
-    def list_split(split_sym, split_string):
+    def string_split(split_sym, split_string):
         split_list = []
         split_str = ''
         for i in split_string:
@@ -15,7 +15,7 @@ def high_and_low(numbers):
             split_list.append(int(split_str))
         return split_list
 
-    print(list_split(' ', numbers))
-    return f'{max(list_split(' ', numbers))} {min(list_split(' ', numbers))}'
+    print(string_split(' ', numbers))
+    return f'{max(string_split(' ', numbers))} {min(string_split(' ', numbers))}'
 
 print(high_and_low(numbers))
