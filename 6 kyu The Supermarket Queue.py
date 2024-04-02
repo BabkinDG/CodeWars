@@ -1,18 +1,18 @@
 customers = [10, 2, 3, 3]  # время необходимое каждому покупателю
-number_of_checkout_tills = 2  # число касс
+number_oct = 2  # number_of_checkout_tills число касс
 
 
-def queue_time(customers, number_of_checkout_tills):
-    self_checkout_time = []
+def queue_time(customers, noct):
+    sc_time = []  # self-checkout time
     if not customers:
         return 0
-    if number_of_checkout_tills > len(customers):
-        number_of_checkout_tills = len(customers)
-    for i in range(number_of_checkout_tills):
-        self_checkout_time.append(customers[i])
-    for i in range(number_of_checkout_tills, len(customers)):
-        self_checkout_time[self_checkout_time.index(min(self_checkout_time))] += customers[i]
-    return max(self_checkout_time)
+    if noct > len(customers):
+        noct = len(customers)
+    for i in range(noct):
+        sc_time.append(customers[i])
+    for i in range(noct, len(customers)):
+        sc_time[sc_time.index(min(sc_time))] += customers[i]
+    return max(sc_time)
 
 
-print(queue_time(customers, number_of_checkout_tills))
+print(queue_time(customers, number_oct))
