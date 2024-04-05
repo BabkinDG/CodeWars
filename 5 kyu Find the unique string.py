@@ -1,27 +1,27 @@
-array_list = ['Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a']  # --> 'BbBb'
+array = ['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']  # --> 'foo'
 
 
-def find_uniq(array_list):
+def find_uniq(array):
 
-    array = []
+    array_list = []
 
-    for i in array_list:
+    for i in array:
         if i.count(' ') == len(i) or i == '':
-            array.append('EMPTY')
+            array_list.append('EMPTY')
         elif i[0].lower() * len(i) == i.lower():
-            array.append(i[0].lower())
+            array_list.append(i[0].lower())
         else:
             for n in i:
-                array.append(n.lower())
-    print(array)
+                array_list.append(n.lower())
+    print(array_list)
 
-    for i in set(array_list):
-        if i.count(' ') == len(i) and array.count('EMPTY') == 1:
+    for i in set(array):
+        if i.count(' ') == len(i) and array_list.count('EMPTY') == 1:
             return i
         else:
             for n in set(i.lower()):
-                if array.count(n) == 1:
+                if array_list.count(n) == 1:
                     return i
 
 
-print(find_uniq(array_list))
+print(find_uniq(array))
