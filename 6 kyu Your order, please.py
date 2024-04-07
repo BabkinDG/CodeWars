@@ -6,7 +6,6 @@ def order(sentence):
         return ''
     sen_list = sentence.split(' ')
     res_list = [0]*len(sen_list)
-    res_str = ''
     for i in sen_list:
         for n in range(len(sen_list)):
             if str(n+1) in i:
