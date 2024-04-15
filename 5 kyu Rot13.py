@@ -9,7 +9,7 @@ def rot13(message):
     lower = string.ascii_lowercase
     rot13_message = ''
     for i in message:
-        if i in string.ascii_lowercase:
+        if i in lower:
             rot13_message += lower[(lower.index(i) + 13) % 26]
         elif i in upper:
             rot13_message += upper[(upper.index(i) + 13) % 26]
