@@ -10,6 +10,6 @@ def cakes(recipe):
         return min(num_cakes)
     except TypeError:
         return 0
-
+# return min(available.get(k, 0)/recipe[k] for k in recipe)
 
 print(cakes(recipe))
