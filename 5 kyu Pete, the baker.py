@@ -12,4 +12,5 @@ def cakes(recipe):
         return 0
 # return min(available.get(k, 0)/recipe[k] for k in recipe)
 
+
 print(cakes(recipe))
