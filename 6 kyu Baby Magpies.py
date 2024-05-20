@@ -14,6 +14,7 @@ def child(bird1, bird2):
     else:
         return False
 
+
 def grandchild(bird1, bird2):
     difference_list = []
     for i in range(len(bird1)):

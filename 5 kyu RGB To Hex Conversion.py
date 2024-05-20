@@ -21,4 +21,5 @@ def rgb(r, g, b):
 
     return hexadecimal(limit(r)) + hexadecimal(limit(g)) + hexadecimal(limit(b))
 
+
 print(rgb(r, g, b))
