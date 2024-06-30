@@ -8,6 +8,8 @@ def find_outlier(integers):
             even.append(i)
         if i % 2 == 1:
             odd.append(i)
+        if len(even) > 0 and len(odd) > 0 and (len(even) >= 2 or len(odd) >= 2):
+            break
     if len(even) == 1:
         return even[0]
     if len(odd) == 1:
